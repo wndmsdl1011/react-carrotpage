@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Article({ product, onBack, onDelete }) {
+export default function Article({ product, onBack, onDelete, onUpdate}) {
   if (!product) return <p>상품을 찾을 수 없습니다.</p>;
 
   return (
@@ -23,6 +23,7 @@ export default function Article({ product, onBack, onDelete }) {
 
       <button onClick={onDelete}>삭제하기</button>
       <button onClick={onBack}>뒤로 가기</button>
+      <button onClick={onUpdate}>내용 수정</button>
     </article>
   );
 }
